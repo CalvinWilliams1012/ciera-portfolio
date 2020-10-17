@@ -2,22 +2,26 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
-  <header
+
+const Header = ({ siteTitle }) => {
+  
+  return (
+  <header className="navbar"
     style={{
-      background: `rebeccapurple`,
+      background: `#F9B5AC`,
       marginBottom: `1.45rem`,
     }}
   >
     <div
+    className="navbar-start"
       style={{
         margin: `0 auto`,
         maxWidth: 960,
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
         <Link
+        className="navbar-item"
           to="/"
           style={{
             color: `white`,
@@ -26,10 +30,10 @@ const Header = ({ siteTitle }) => (
         >
           {siteTitle}
         </Link>
-      </h1>
+        <a className="navbar-item" href="https://www.instagram.com/hairbycierahearn/">@hairbycierahearn</a>
     </div>
   </header>
-)
+)}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
