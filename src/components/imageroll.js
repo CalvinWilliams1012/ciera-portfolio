@@ -23,7 +23,7 @@ const ImageRoll = () => {
     {data.allImageSharp.edges.map(({node}) =>
                                             <div className="column is-one-quarter">
                                               <figure className="image">
-                                                <Img fluid={node.fluid} />  
+                                                <Img fluid={node.fluid} durationFadeIn={75}/>  
                                               </figure>
                                             </div>
                                         )
